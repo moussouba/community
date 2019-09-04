@@ -76,7 +76,7 @@ class SensibilisationController extends Controller
         $sensib = Sensibilisation::respo()->findOrFail($id);
         
         $sensib->delete();
-        return redirect()->back()->with('success','Vous avez bien supprimé une campagne');;
+        return redirect()->back()->with('success','Vous avez bien supprimé une campagne');
     }
 
 }

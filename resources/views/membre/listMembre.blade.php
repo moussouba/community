@@ -10,7 +10,7 @@
         @if(Auth::user()->type != 3)
         <div class="col-7 align-self-center">
             <div class="d-flex no-block justify-content-end align-items-center">
-                <a href="{{ route('register') }}" class="btn btn-pure nouvel">Nouveau membre</a>
+                <a href="{{ route('registerWiew') }}" class="btn btn-pure nouvel">Nouveau membre</a>
             </div>
         </div>
         @endif
@@ -32,6 +32,9 @@
                                     <img width="14" src="{{ asset('/assets/images/rating/star-off.png')}}" alt="">
                                 @endif
                                 </h4>
+                                <small class="text-success">
+                                        {{ $usr->communaute['nom'] }}
+                                </small>
                             </div>
                             <div class="col-md-3">
                                 <img style="border:3px solid rgba(49,230,0,0.7);cursor:pointer" width="50" src="{{ asset('/assets/images/users/0.jpeg')}}" alt="" class="rounded-circle">

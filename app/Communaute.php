@@ -14,7 +14,11 @@ class Communaute extends Model
 
     public function responsable()
     {
-        return $this->hasMany('App\User')->where('type',2);
+        return $this->hasMany('App\User')->where('type','=',2);
+    }
+    public function membres()
+    {
+        return $this->hasMany('App\User');
     }
 
     public function sensibilisation(){

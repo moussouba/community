@@ -4,11 +4,11 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Ajout</h4> <br>
+                    <h4 class="card-title">Ajout</h4><br>
                     <h6 class="text-danger card-subtitle">Tous les champs sont requis <b>(*)</b></h6>
                 </div>
                 <hr class="m-t-0">
-                <form class="form-horizontal r-separator" method="POST" action="{{ route('register') }}">
+                <form class="form-horizontal r-separator" method="POST" action="{{ route('registerValid') }}">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-6 col-lg-6">
@@ -153,7 +153,10 @@
                                     <label for="inputEmail9" class="col-sm-3 text-left control-label col-form-label"> Communauté</label>
                                     <div class="col-sm-9">
                                         <select class="col-md-12 @error('communaute') is-invalid @enderror" name="communaute" id="9">
-                                            <option selected value="1">Aucune communauté</option>
+                                            <option selected value="null">Aucune communauté</option>
+                                            @foreach($communaute as $com)
+                                                <option value="{{ $com->id }}">{{ $com->nom }} {{ $com->localite }}</option>
+                                            @endforeach
                                         </select>
                                         @error('communaute')
                                             <span class="invalid-feedback" role="alert">

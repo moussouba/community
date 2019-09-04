@@ -33,10 +33,10 @@
                 color: { pattern: ["#2962FF", "#4fc3f7", "#f00"] },
                 data: {
                     columns: [
+                        ["Total", @foreach($total as $t) {{ $t }}, @endforeach],
                         ["Fille", @foreach($fille as $f) {{ $f }}, @endforeach],
-                        ["Garçon", 0, 350, 200, 150, 50, 0],
-                        ["Total", 0, 50, 300, 250, 150, 50],
-                        
+                        ["Garçon", @foreach($garcon as $g) {{ $g }}, @endforeach],
+
                     ],
                     types: { Fille: "area-spline", Garçon: "area-spline" , Total: "area-spline" }
                 },

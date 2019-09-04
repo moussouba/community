@@ -67,7 +67,7 @@
                                 <span class="with-arrow">
                                     <span class="bg-primary"></span>
                                 </span>
-                        <a class="dropdown-item" href="{{ route('register',['todo'=>true])}}">
+                        <a class="dropdown-item" href="{{ route('profil')}}">
                             <i class="ti-user m-r-5 m-l-5"></i> Profil
                         </a>
                         <a class="dropdown-item" href="{{ route('logout') }}"

@@ -41,15 +41,23 @@
                                 <tr>
                                     <td>{{ $item->nom }}</td>
                                     <td>{{ $item->localite }}</td>
-                                    <td>respo</td>
-                                    <td>tel</td>
-                                    <td><a href="{{ $item->lien }}" target="_blank">{{ $item->lien }}</a></td>
-                                    <td>20</td>
-                                    @if(Auth::user()->type == 1)
                                     <td>
-                                        <a href="{{ route('updateCommunauteView', ['id'=>$item->id]) }}" class="btn btn-xs btn-pure nouvel">Modifier</a>
-                                        <a href="{{ route('deleteCommunaute', ['id'=>$item->id]) }}" class="btn btn-xs btn-pure nouvel">Supprimer</a>
+                                        @foreach($item->responsable as $rp)
+                                            {{ $rp->name }} {{ $rp->prenom }}
+                                        @endforeach
                                     </td>
+                                    <td>
+                                        @foreach($item->responsable as $rp)
+                                            {{ $rp->tel }}
+                                        @endforeach
+                                    </td>
+                                    <td><a href="{{ $item->lien }}" target="_blank">{{ $item->lien }}</a></td>
+                                    <td>{{ $item->membres->count() }}</td>
+                                    @if(Auth::user()->type == 1)
+                                        <td>
+                                            <a href="{{ route('updateCommunauteView', ['id'=>$item->id]) }}" class="btn btn-xs btn-pure nouvel">Modifier</a>
+                                            <a href="{{ route('deleteCommunaute', ['id'=>$item->id]) }}" class="btn btn-xs btn-pure nouvel">Supprimer</a>
+                                        </td>
                                     @endif
                                 </tr>
                             @endforeach

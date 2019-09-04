@@ -4,7 +4,31 @@ Auth::routes();
 
 Route::group(['middleware'=>'auth'],function(){
 
-    Route::get('/regis','Auth\ProfilController@registerView');
+    Route::get('/registration',[
+        'as' => 'registerWiew',
+        'uses' => 'Auth\ProfilController@registerView'
+    ]);
+
+    Route::get('/profil',[
+        'as' => 'profil',
+        'uses' => 'Auth\ProfilController@profil'
+    ]);
+
+
+//    Route::get('/registration/{update}',[
+//        'as' => 'registerWiew',
+//        'uses' => 'Auth\ProfilController@registerView'
+//    ])->where('uodate','update');
+
+    Route::post('/registerValid',[
+        'as'=>'registerValid',
+        'uses'=>'Auth\ProfilController@registerValid'
+    ]);
+
+     Route::post('/updateProfil',[
+         'as'=>'updateProfil',
+         'uses'=>'Auth\ProfilController@updateProfil'
+     ]);
 
     Route::get('/', 'DashboardController@index')->name('home');
     Route::get('/index', 'DashboardController@index')->name('home');
