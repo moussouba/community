@@ -10,9 +10,11 @@
 
     @if(Auth::user()->type != 1 || Auth::user()->type != 3)
         <div class="col-9 text-right">
+            {{--            Search bar--}}
             <div class="d-inline-block no-block justify-content-end align-items-center">
-                <a href="{{ route('addS') }}" class="btn btn-pure nouvel">Nouvelle Campagne</a>
+                <input class="" type="search" placeholder="Rechercher ...">
             </div>
+            {{--            Search bar--}}
             <div class="d-inline-block no-block justify-content-end align-items-center">
                 <a href="{{ route('addS') }}" class="btn btn-pure nouvel">Nouvelle Campagne</a>
             </div>
