@@ -31,14 +31,16 @@
         }
         #droite{
             display:none;
-            background:#eeeeee;
-            color: #091638
+            background-color: purple;
+            opacity: 0.6;
+            color: white
         }
     </style>
     <div class="row">
         <div id="gauche" class="col-lg-12 vh-100" 
             style="
-                background:linear-gradient(rgba(0,0,0,0.5) 100%, rgba(0,0,0,0.5) 100%), url('/assets/images/img5.jpg');
+                background:linear-gradient(purple 100%, purple 100%), url('/assets/images/img5.jpg');
+                opacity: 0.8;
                 background-position:right;
                 background-repeat: no-repeat;
                 background-size: cover;

@@ -108,8 +108,8 @@ body[data-theme='dark'] {
   body[data-theme='dark'] .select2-container--default .select2-selection--multiple,
   body[data-theme='dark'] .select2-container--classic .select2-selection--single,
   body[data-theme='dark'] .dtp > .dtp-content {
-    background-color: #091638;
-    opacity: 0.7 }
+    background-color: green;
+    opacity: 0.6 }
   body[data-theme='dark'] .dropzone,
   body[data-theme='dark'] .mailbox .message-center .message-item:hover,
   body[data-theme='dark'] .dropdown-item:hover,
@@ -117,8 +117,8 @@ body[data-theme='dark'] {
   body[data-theme='dark'] .picker__button--today,
   body[data-theme='dark'] .picker__button--clear,
   body[data-theme='dark'] .picker__button--close {
-    background: #091638;
-    opacity: 0.7 }
+    background: green;
+    opacity: 0.6 }
   body[data-theme='dark'] .right-part.mail-list,
   body[data-theme='dark'] .right-part.mail-details,
   body[data-theme='dark'] .right-part.mail-compose,
@@ -603,7 +603,7 @@ textarea {
   padding:15px!important; }
 
  button{padding: 8px!important;
-        background-color: #091638;
+        background-color: green;
         border:2px solid #fff;
         color: #ffffff}
 
