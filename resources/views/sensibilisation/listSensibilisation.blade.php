@@ -12,7 +12,9 @@
         <div class="col-9 text-right">
             {{--            Search bar--}}
             <div class="d-inline-block no-block justify-content-end align-items-center">
-                <input class="" type="search" placeholder="Rechercher ...">
+                <form action="" method="post" role="search">
+                    <input class="" type="search" placeholder="Rechercher ...">
+                </form>
             </div>
             {{--            Search bar--}}
             <div class="d-inline-block no-block justify-content-end align-items-center">
