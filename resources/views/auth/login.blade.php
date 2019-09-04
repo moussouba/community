@@ -18,12 +18,6 @@
             height:100vh;
             color:#fff;
         }
-        .bg-vh{
-            background:red url('{{ asset("/assets/images/img5.jpg") }}');
-            background-position:center;
-            background-repeat: no-repeat;
-            background-size: contain;
-        }
         .banner-left{
             font-family:roboto;
         }
@@ -37,33 +31,39 @@
         }
         #droite{
             display:none;
+            background:#eeeeee;
+            color: #091638
         }
     </style>
     <div class="row">
         <div id="gauche" class="col-lg-12 vh-100" 
             style="
-                background:linear-gradient(rgba(0,0,0,0.6) 100%, rgba(0,0,0,0.6) 100%), url('/assets/images/img5.jpg');
+                background:linear-gradient(rgba(0,0,0,0.5) 100%, rgba(0,0,0,0.5) 100%), url('/assets/images/img5.jpg');
                 background-position:right;
                 background-repeat: no-repeat;
                 background-size: cover;
             ">
             <div class="mt-4 mb-4 text-center">
-                <img width="50" src="{{ asset('/assets/images/logo-icon.png') }}" alt="">
+                <img width="80" src="{{ asset('/assets/images/logo-icon.png') }}" alt="">
             </div>
             <div class="container banner-left ">
-                <div class="col-12 big-font p-0 m-0 text-center text- fa-3x">
+                <div class="col-12 p-0 m-0 text-center text- fa-3x">
                     COMMUNITY
                 </div>
-                <div class="col-12 p-0 m-0  big-font text-muted text-center fa-2x text-upper">
+                <div class="col-12 p-0 m-0  big-font text-center fa-2x text-upper">
                     La plateforme des communautés uvci
                 </div>
-                <div class="col-12 mt-4 mb-4 text-muted text-center" style="font-size:20px">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt et voluptatibus hic distinctio odit aut, quis obcaecati optio amet nihil, incidunt voluptatem necessitatibus harum tenetur quos saepe. Mollitia, qui accusantium!
+                <div class="col-12 mt-4 mb-4 text-center text- fa-3x" style="font-size:16px">
+                    Community est une plateforme de récensement pour les communautés de l'Université Virtuelle de Cote d'Ivoire(UVCI) , elle va les permettre de mener à bien leurs différentes campagnes de sensibilisation , notement par le récensement de facon numerique des nouveaux bacheliers et ou toutes personnes desireuse d'en savoir plus sur l'Universite Virtuelle de Cote d Ivoire.
+                    Cette plateforme a été mise en place par la communauté BOSSER POUR ETRE BOSS DE KOUMASSI.
                 </div>
                 <div class="container" style="bottom:0px;position:absolute">
-                    <div class="row">
-                        <div class="col-6 text-left text-muted">
-                            <p class="big-font banner-left fa-5x">500</p>
+                    <div class="row" style="bottom :0 !important">
+                        <div class="col-6 text-left" style="font-size: 30px;margin-top: 40px !important">
+                            <a href="https://youtube.com"><i class="fab fa-youtube" style="color: red"></i></a>
+                            <a href="https://youtube.com"><i class="fab fa-github" style="color: grey"></i></a>
+                            <a href="https://youtube.com"><i class="fab fa-facebook" style="color: blue"></i></a>
+                            <a href="https://youtube.com"><i class="fab fa-whatsapp" style="color: green"></i></a>
                         </div>
                         <div class="col-6 text-right ">
                             <button id="test" type="button" class="mt-2 mr-5 btn btn-outline-light btn-circle">
@@ -76,7 +76,7 @@
             
         </div>
 
-        <div id="droite" class="col-md-6 vh-100">
+        <div id="droite" class="col-md-6 vh-100 noir">
             <div class="container" style="margin-top:20%;">
                 <div class="mt-5">
                     <div class="col-md-12 mt-5 pt-0">
@@ -90,7 +90,7 @@
                                             <small class="text-danger ml-1 fa-1x">*</small>
                                         </label>
                                         <div class="col-sm-10">
-                                            <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                            <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required>
                                             @error('email')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>

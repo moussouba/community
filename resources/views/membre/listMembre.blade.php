@@ -2,7 +2,7 @@
 @section('bread')
     <div class="row">
         <div class="col-5 align-self-center">
-            <h4 class="page-title">Total Membres ({{$user->count()}})</h4>
+            <h4 class="page-title titre_white">Total Membres ({{$user->count()}})</h4>
             <div class="d-flex align-items-center">
 
             </div>
@@ -20,7 +20,7 @@
     <div class="row">
         @foreach($user as $usr)
             <div class="col-lg-4 col-md-4">
-                <div class="card">
+                <div class="card cadre">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-9" style="vertical-align:bottom">
@@ -37,7 +37,7 @@
                                 </small>
                             </div>
                             <div class="col-md-3">
-                                <img style="border:3px solid rgba(49,230,0,0.7);cursor:pointer" width="50" src="{{ asset('/assets/images/users/0.jpeg')}}" alt="" class="rounded-circle">
+                                <img style="border:3px solid rgba(49,230,0,0.7);cursor:pointer" width="50" src="{{ asset('/assets/images/users/user.png')}}" alt="" class="rounded-circle">
                             </div>
                         </div>
                         <div class="row p-t-10 p-b-10">

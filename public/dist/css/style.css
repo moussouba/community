@@ -32,11 +32,7 @@ File: scss
 @import url(icons/iconmind/iconmind.css);
 .search-box .app-search .form-control, .topbar .mega-dropdown .dropdown-menu {
   border-radius: 0px; }
-input,select{
-  background:#9ba0ad18 !important;
-  border:0px;
-  color: #fff !important;
-}
+
 .topbar .dropdown-menu .with-arrow > span {
   transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -85,11 +81,11 @@ body[data-theme='dark'] {
     color: #e9ecef !important; }
   body[data-theme='dark'] .badge-light {
     background-color: #343a40;
-    color: #b2b9bf; }
+    color: #ffffff; }
   body[data-theme='dark'] .btn-light {
     background-color: #343a40;
     border-color: #343a40;
-    color: #b2b9bf; }
+    color: #ffffff; }
   body[data-theme='dark'] .custom-control-label::before {
     background-color: #6c757d; }
   body[data-theme='dark'] .card,
@@ -112,7 +108,8 @@ body[data-theme='dark'] {
   body[data-theme='dark'] .select2-container--default .select2-selection--multiple,
   body[data-theme='dark'] .select2-container--classic .select2-selection--single,
   body[data-theme='dark'] .dtp > .dtp-content {
-    background-color: #2b3142; }
+    background-color: #091638;
+    opacity: 0.7 }
   body[data-theme='dark'] .dropzone,
   body[data-theme='dark'] .mailbox .message-center .message-item:hover,
   body[data-theme='dark'] .dropdown-item:hover,
@@ -120,7 +117,8 @@ body[data-theme='dark'] {
   body[data-theme='dark'] .picker__button--today,
   body[data-theme='dark'] .picker__button--clear,
   body[data-theme='dark'] .picker__button--close {
-    background: #2b3142; }
+    background: #091638;
+    opacity: 0.7 }
   body[data-theme='dark'] .right-part.mail-list,
   body[data-theme='dark'] .right-part.mail-details,
   body[data-theme='dark'] .right-part.mail-compose,
@@ -128,12 +126,11 @@ body[data-theme='dark'] {
   body[data-theme='dark'] .card-footer,
   body[data-theme='dark'] .typeahead.form-control,
   body[data-theme='dark'] .select2-dropdown {
-    background-color: #2b3142 !important; }
+    background-color: #091638 !important; }
   body[data-theme='dark'] .jumbotron,
   body[data-theme='dark'] .page-wrapper,
   body[data-theme='dark'] .progress,
   body[data-theme='dark'] .breadcrumb,
-  body[data-theme='dark'] .dropdown-menu,
   body[data-theme='dark'] #main-wrapper,
   body[data-theme='dark'] .wizard:not(.wizard-circle) > .steps .disabled a,
   body[data-theme='dark'] .wizard:not(.wizard-circle) > .steps .disabled a:hover,
@@ -144,7 +141,7 @@ body[data-theme='dark'] {
   body[data-theme='dark'] .wizard:not(.wizard-circle) > .actions .disabled a:active,
   body[data-theme='dark'] .wizard-content .wizard > .steps .step,
   body[data-theme='dark'] .cke_toolbar_separator {
-    background-color: #2d3548; }
+    background-color: #eeeeee; }
   body[data-theme='dark'] .fc-unthemed td.fc-today,
   body[data-theme='dark'] .fc-toolbar .fc-button.fc-state-active,
   body[data-theme='dark'] .picker__list-item,
@@ -212,7 +209,7 @@ body[data-theme='dark'] {
     background: #343a40;
     text-shadow: none; }
     body[data-theme='dark'] .mce-btn button {
-      color: #b2b9bf; }
+      color: #ffffff; }
   body[data-theme='dark'] .page-wrapper,
   body[data-theme='dark'] .form-control,
   body[data-theme='dark'] .custom-select,
@@ -245,7 +242,7 @@ body[data-theme='dark'] {
   body[data-theme='dark'] .cke_reset_all *,
   body[data-theme='dark'] .cke_reset_all a,
   body[data-theme='dark'] .cke_reset_all textarea {
-    color: #b2b9bf; }
+    color: #ffffff; }
   body[data-theme='dark'] .mailbox .message-center .message-item .message-title,
   body[data-theme='dark'] .lobilists .lobilist-item-title {
     color: #fff; }
@@ -361,8 +358,8 @@ body[data-theme='dark'] {
   body[data-theme='dark'] .custom-select.is-invalid {
     border-color: #ef6e6e !important; }
   body[data-theme='dark'] .ct-label {
-    fill: #b2b9bf;
-    color: #b2b9bf; }
+    fill: #ffffff;
+    color: #ffffff; }
   body[data-theme='dark'] .ct-grid {
     stroke: #262d35; }
 
@@ -606,8 +603,9 @@ textarea {
   padding:15px!important; }
 
  button{padding: 8px!important;
-        background-color: #fff;
-        border:2px solid #fff;}
+        background-color: #091638;
+        border:2px solid #fff;
+        color: #ffffff}
 
 button,
 input {
@@ -13947,3 +13945,19 @@ File: scss
 @media (max-width: 991.98px) {
   .do-block {
     display: block !important; } }
+
+.hvr-glow {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+.cadre:hover, .cadre:focus, .cadre:active{
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.cadre{
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 1);
+}
+.titre_white{
+  color: #091638
+}
