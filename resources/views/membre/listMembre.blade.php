@@ -2,7 +2,7 @@
 @section('bread')
     <div class="row">
         <div class="col-5 align-self-center">
-            <h4 class="page-title titre_white">Total Membres ({{$user->count()}})</h4>
+            <h4 class="page-title titre_white">Total Membres ({{$user->total()}})</h4>
             <div class="d-flex align-items-center">
 
             </div>
@@ -57,5 +57,14 @@
                 </div>
             </div>
         @endforeach
+
+    </div>
+    <div class="row">
+        <div style="margin-top:8%">
+            <nav aria-label="Page navigation example" class="text-center">
+                {{ $user->links() }}
+            </nav>
+
+        </div>
     </div>
 @endsection

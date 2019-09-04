@@ -15,7 +15,7 @@ class SensibilisationController extends Controller
     public function listSensibilisation()
     {
 
-        $items = Sensibilisation::respo()->get();
+        $items = Sensibilisation::respo()->paginate(12);
         return View('sensibilisation.listSensibilisation')->with('items', $items);
     }
 
@@ -88,7 +88,7 @@ class SensibilisationController extends Controller
     public function uploadPV(Request $request, $id)
     {
         $sensib = Sensibilisation::respo()->findOrFail($id);
-        if($sensib->path == null)
+        if(true)
         {
             $file = $request->file('pv');
             $ext = $file->getClientOriginalExtension();
@@ -96,9 +96,6 @@ class SensibilisationController extends Controller
             $path = $request->file('pv')->storeAs('uploadPV',$custom_path);
             $sensib->path = $path;
             $sensib->save();
-        }else
-        {
-            echo "deja";
         }
 
     }
@@ -109,3 +106,4 @@ class SensibilisationController extends Controller
     }
 
 }
+

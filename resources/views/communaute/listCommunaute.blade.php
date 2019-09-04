@@ -7,7 +7,7 @@
                     <div class="page-breadcrumb">
                         <div class="row">
                             <div class="col-5 align-self-center">
-                                <h4 class="page-title">Communautés enregistrées ({{$items->count()}})</h4>
+                                <h4 class="page-title">Communautés enregistrées ({{$items->total()}})</h4>
                                 <div class="d-flex align-items-center">
 
                                 </div>
@@ -67,5 +67,10 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div style="margin-top:8%">
+        <nav aria-label="Page navigation example" class="text-center">
+            {{ $items->links() }}
+        </nav>
     </div>
 @endsection

@@ -11,7 +11,7 @@ class RecenseController extends Controller
 {
     public function listRecense($id){
         $sensib = Sensibilisation::respo()->findOrFail($id);
-        $perso = Recense::where('sensibilisation_id',$id)->get();
+        $perso = Recense::where('sensibilisation_id',$id)->paginate(12);
         return View('recense.listRecense')->with('items',$perso)->with('sensib',$sensib)->with('id',$id);
     }
 

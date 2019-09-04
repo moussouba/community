@@ -1,15 +1,19 @@
 @extends('layout')
 @section('bread')
     <div class="row">
-        <div class="col-5 align-self-center">
-            <h4 class="page-title">Liste des Campagnes({{ $items->count() }})</h4>
+        <div class="col-3 align-self-center">
+            <h4 class="page-title titre_white">Liste des Campagnes({{ $items->total() }})</h4>
             <div class="d-flex align-items-center">
 
             </div>
         </div>
+
     @if(Auth::user()->type != 1 || Auth::user()->type != 3)
-        <div class="col-7 align-self-center">
-            <div class="d-flex no-block justify-content-end align-items-center">
+        <div class="col-9 text-right">
+            <div class="d-inline-block no-block justify-content-end align-items-center">
+                <a href="{{ route('addS') }}" class="btn btn-pure nouvel">Nouvelle Campagne</a>
+            </div>
+            <div class="d-inline-block no-block justify-content-end align-items-center">
                 <a href="{{ route('addS') }}" class="btn btn-pure nouvel">Nouvelle Campagne</a>
             </div>
         </div>
@@ -51,7 +55,7 @@
                         </div>
                         <div class="d-flex no-block align-items-center m-b-15">
                             @if(Auth::user()->type == 1 && $item->path != 'NULL' && $item->path != "")
-                                <a class="dropdown-item" href="{{ route('download',['file'=>'file']) }}"> Charger le pv de cette campagne</a>
+                                <a class="dropdown-item" href="{{ Storage::path($item->path) }}"> Charger le pv de cette campagne</a>
                             @endif
                         </div>
                     </div>
@@ -60,5 +64,11 @@
             </div>
     @endforeach
     <!-- Column -->
+    </div>
+    <div style="margin-top:8%">
+        <nav aria-label="Page navigation example" class="text-center">
+            {{ $items->links() }}
+        </nav>
+
     </div>
 @endsection

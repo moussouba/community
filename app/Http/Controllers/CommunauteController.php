@@ -11,7 +11,7 @@ class CommunauteController extends Controller
 {
     public function listCommunaute()
     {
-        $perso = Communaute::all();
+        $perso = Communaute::paginate(12);
         return View('communaute.listCommunaute')->with('items',$perso);
     }
 

@@ -9,7 +9,7 @@ class MembreController extends Controller
 {
     public function listMembre()
     {
-        $usr = User::respo()->get();
+        $usr = User::respo()->paginate(12);
         return View('membre.listMembre')->with('user',$usr);
     }
 
