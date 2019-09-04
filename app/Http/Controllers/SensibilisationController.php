@@ -6,6 +6,7 @@ use App\Http\Requests\AddSensibilisationRequest;
 use App\Sensibilisation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class SensibilisationController extends Controller
@@ -77,6 +78,34 @@ class SensibilisationController extends Controller
         
         $sensib->delete();
         return redirect()->back()->with('success','Vous avez bien supprimé une campagne');
+    }
+
+    public function uploadPVView($id)
+    {
+        return View('sensibilisation/addPV')->with('id',$id);
+    }
+
+    public function uploadPV(Request $request, $id)
+    {
+        $sensib = Sensibilisation::respo()->findOrFail($id);
+        if($sensib->path == null)
+        {
+            $file = $request->file('pv');
+            $ext = $file->getClientOriginalExtension();
+            $custom_path = "$sensib->slug.$ext";
+            $path = $request->file('pv')->storeAs('uploadPV',$custom_path);
+            $sensib->path = $path;
+            $sensib->save();
+        }else
+        {
+            echo "deja";
+        }
+
+    }
+
+    public function download($file)
+    {
+        return Storage::download(Storage::path());
     }
 
 }

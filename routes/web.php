@@ -14,7 +14,10 @@ Route::group(['middleware'=>'auth'],function(){
         'uses' => 'Auth\ProfilController@profil'
     ]);
 
-
+   Route::get('/download/{file}',[
+       'as'=>'download',
+       'uses'=>'SensibilisationController@download'
+   ]);
 //    Route::get('/registration/{update}',[
 //        'as' => 'registerWiew',
 //        'uses' => 'Auth\ProfilController@registerView'
@@ -56,6 +59,16 @@ Route::group(['middleware'=>'auth'],function(){
         ])->where('id','[0-9]+');
 
             Route::group(['middleware'=>'respo'],function(){
+
+                route::get('/upload/{id}',[
+                    'as'=>'uploadPVView',
+                    'uses'=>'SensibilisationController@uploadPVView'
+                ])->where('id','[0-9]+');
+
+                route::post('/uploadPV/{id}',[
+                    'as'=>'uploadPV',
+                    'uses'=>'SensibilisationController@uploadPV'
+                ])->where('id','[0-9]+');
 
                 route::post('/updateCommunaute/valid/{id}',[
                     'as' => 'updateCommunauteValid',

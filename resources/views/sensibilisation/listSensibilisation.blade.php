@@ -32,6 +32,9 @@
                             <span class="bg-primary"></span>
                         </span>
                         <a class="dropdown-item" href="{{ route('listRecense',['id'=>$item->id]) }}"> Afficher</a>
+                        @if(Auth::user()->type == 2)
+                            <a class="dropdown-item" href="{{ route('uploadPVView',['id'=>$item->id]) }}"> Charger le pv de cette campagne</a>
+                        @endif
                         <a class="dropdown-item" href="{{ route('addRecense',['id'=>$item->id]) }}" target="_blank"> Récenser maintenant</a>
                         <a class="dropdown-item" href="{{ route('updateView',['id'=>$item->id]) }}"> Modifier</a>
                         <a class="dropdown-item" href="{{ route('deleteS',['id'=>$item->id]) }}"> Supprimer</a>
@@ -41,16 +44,15 @@
                         <center><h3>{{ $item->libelle }}</h3></center>
                         <small class="text-center">{{ $item->description }}</small><br>
                         <div class="d-flex no-block align-items-center m-b-15">
-                            <span><i class="fa fa-calendar">{{ $item->beginAt }}</i></span>
+                            <span><i class="fa fa-calendar">&nbsp;{{ $item->beginAt }}</i></span>
                             <div class="ml-auto">
-                                <span><i class="fa fa-calendar">{{ $item->endAt }}</i></span>
+                                <span><i class="fa fa-calendar">&nbsp;{{ $item->endAt }}</i></span>
                             </div>
                         </div>
                         <div class="d-flex no-block align-items-center m-b-15">
-                            <span><i class="fa fa-female">tatal filles: </i></span>
-                            <div class="ml-auto">
-                                <span><i class="fa fa-male">total garçons</i></span>
-                            </div>
+                            @if(Auth::user()->type == 1 && $item->path != 'NULL' && $item->path != "")
+                                <a class="dropdown-item" href="{{ route('download',['file'=>'file']) }}"> Charger le pv de cette campagne</a>
+                            @endif
                         </div>
                     </div>
                 </div>
