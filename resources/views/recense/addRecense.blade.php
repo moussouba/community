@@ -76,7 +76,7 @@
             
         </div>
 
-        <div id="droite" class="col-md-6 vh-100 noir violet_bg">
+        <div id="droite" class="col-md-6 vh-100">
             <div class="container">
                 <div class="">
                     <div class="col-md-12 text-center pt-0">
