@@ -16,13 +16,13 @@
                                 <div class="form-group row">
                                     <label for="inputEmail0" class="col-sm-3 text-left control-label col-form-label"> Nom</label>
                                     <div class="col-sm-9">
-                                        <input type="text" name="name" value="{{ Auth::user()->name }}" required class="@error('name') is-invalid @enderror form-control" id="inputEmail0" placeholder="Nom du membre" style="background-color: red !important">
+                                        <input type="text" name="name" value="{{ Auth::user()->name }}" required class="@error('name') is-invalid @enderror form-control" id="inputEmail0" placeholder="Nom du membre" style="background-color: #333d54 !important">
                                         @error('name')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
-                                        <input type="hidden" name="_token" class="form-control" value="{{ csrf_token() }}">
+                                        <input type="hidden" name="_token" class="form-control" value="{{ csrf_token() }}" style="background-color: #333d54 !important">
                                     </div>
                                 </div>
                             </div>
@@ -30,7 +30,7 @@
                                 <div class="form-group row">
                                     <label for="inputEmail1" class="col-sm-3 text-left control-label col-form-label"> Prenom(s)</label>
                                     <div class="col-sm-9">
-                                        <input type="text" name="prenom" value="{{ Auth::user()->prenom }}" required class="@error('prenom') is-invalid @enderror form-control" id="inputEmail1" placeholder="Prenom du membre">
+                                        <input type="text" name="prenom" value="{{ Auth::user()->prenom }}" required class="@error('prenom') is-invalid @enderror form-control" id="inputEmail1" placeholder="Prenom du membre" style="background-color: #333d54 !important">
                                         @error('prenom')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -43,7 +43,7 @@
                                 <div class="form-group row">
                                     <label for="inputEmail4" class="col-sm-3 text-left control-label col-form-label"> Telephone</label>
                                     <div class="col-sm-9">
-                                        <input type="text" name="tel" value="{{ Auth::user()->tel }}" class="form-control" id="inputEmail4" placeholder="Telephone du membre">
+                                        <input type="text" name="tel" value="{{ Auth::user()->tel }}" class="form-control" id="inputEmail4" placeholder="Telephone du membre" style="background-color: #333d54 !important">
                                     </div>
                                 </div>
                             </div>
@@ -51,7 +51,7 @@
                                 <div class="form-group row">
                                     <label for="inputEmail6" class="col-sm-3 text-left control-label col-form-label"> E-mail</label>
                                     <div class="col-sm-9">
-                                        <input type="email" name="email" value="{{ Auth::user()->email }}" class="@error('email') is-invalid @enderror form-control" id="inputEmail6" placeholder="E-mail du membre">
+                                        <input type="email" name="email" value="{{ Auth::user()->email }}" class="@error('email') is-invalid @enderror form-control" id="inputEmail6" placeholder="E-mail du membre" style="background-color: #333d54 !important">
                                         @error('email')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -130,7 +130,7 @@
                                 <div class="form-group row">
                                     <label for="inputEmail14" class="col-sm-3 text-left control-label col-form-label"> Mot de passe</label>
                                     <div class="col-sm-9">
-                                        <input type="password" name="password" value="" class="@error('password') is-invalid @enderror form-control" id="inputEmail14" placeholder="Mot de passe du membre">
+                                        <input type="password" name="password" value="" class="@error('password') is-invalid @enderror form-control" id="inputEmail14" placeholder="Mot de passe du membre" style="background-color: #333d54 !important">
                                         @error('password')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -143,7 +143,7 @@
                                 <div class="form-group row">
                                     <label for="inputEmail124" class="col-sm-3 text-left control-label col-form-label"> Mot de passe</label>
                                     <div class="col-sm-9">
-                                        <input type="password" name="password_confirmation" value="" class="form-control" id="inputEmail124" placeholder="Mot de passe du membre">
+                                        <input type="password" name="password_confirmation" value="" class="form-control" id="inputEmail124" placeholder="Mot de passe du membre" style="background-color: #333d54 !important">
                                     </div>
                                 </div>
                             </div>
