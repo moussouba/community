@@ -121,7 +121,7 @@
                                     <div class="form-group row">
                                         <label for="inputEmail3" class="col-sm-2"></label>
                                         <div class="text-left col-sm-10">
-                                            <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}><label for="">Remember me</label>
+                                            <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}><label for="">se souvenir de moi</label>
                                             @if (Route::has('password.request'))
                                                 <label class="float-right" for=""><a href="{{ route('password.request') }}">Mot de passe oublié</a></label>
                                             @endif
