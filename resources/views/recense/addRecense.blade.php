@@ -39,7 +39,8 @@
     <div class="row">
         <div id="gauche" class="col-lg-6 vh-100" 
             style="
-                background:linear-gradient(rgba(0,0,0,0.6) 100%, rgba(0,0,0,0.6) 100%), url('/assets/images/img5.jpg');
+                background:linear-gradient(purple 100%, purple 100%), url('/assets/images/img5.jpg');
+                opacity: 0.8;
                 background-position:right;
                 background-repeat: no-repeat;
                 background-size: cover;
