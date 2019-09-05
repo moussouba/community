@@ -35,6 +35,9 @@
             height: 90px;
             width: 90px;
         }
+        #droite{
+            display:none;
+        }
     </style>
     <div class="row">
         <div id="gauche" class="col-lg-6 vh-100" 
@@ -73,7 +76,7 @@
             
         </div>
 
-        <div id="droite" class="col-md-6 vh-100">
+        <div id="droite" class="col-md-6 vh-100 noir violet_bg">
             <div class="container">
                 <div class="">
                     <div class="col-md-12 text-center pt-0">
