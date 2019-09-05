@@ -23,7 +23,7 @@
 
 </head>
 <body>
-    <div class="row">
+    <div class="row violet_bg" style="height: 100vh">
         <div class="col-md-12">
             <div class="container" style="margin-top:18%;">
                 <div class="mt-5">
@@ -53,8 +53,8 @@
                                                 </span>
                                             @enderror
                                         </div>
-                                        <div class="col-sm-3">
-                                            <input type="submit" value="RECEVOIR LE LIEN" class="btn btn-pure col-md-12">
+                                        <div class="col-sm-3" style="background-color: green">
+                                            <input type="submit" style="background-color: green;color: white" value="RECEVOIR LE LIEN" class="btn btn-pure col-md-12">
                                         </div>
                                     </div>
                                 </div>

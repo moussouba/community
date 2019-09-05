@@ -31,9 +31,6 @@
         }
         #droite{
             display:none;
-            background-color: purple;
-            opacity: 0.6;
-            color: white
         }
     </style>
     <div class="row">
@@ -78,7 +75,7 @@
             
         </div>
 
-        <div id="droite" class="col-md-6 vh-100 noir">
+        <div id="droite" class="col-md-6 vh-100 noir violet_bg">
             <div class="container" style="margin-top:20%;">
                 <div class="mt-5">
                     <div class="col-md-12 mt-5 pt-0">
