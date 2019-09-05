@@ -1,5 +1,6 @@
 @extends('layout')
 @section('content')
+
     <div class="row">
         <div class="col-12">
             <div class="card">
@@ -15,7 +16,7 @@
                                 <div class="form-group row">
                                     <label for="inputEmail0" class="col-sm-3 text-left control-label col-form-label"> Nom</label>
                                     <div class="col-sm-9">
-                                        <input type="text" name="name" value="{{ Auth::user()->name }}" required class="@error('name') is-invalid @enderror form-control" id="inputEmail0" placeholder="Nom du membre">
+                                        <input type="text" name="name" value="{{ Auth::user()->name }}" required class="@error('name') is-invalid @enderror form-control" id="inputEmail0" placeholder="Nom du membre" style="background-color: red !important">
                                         @error('name')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>

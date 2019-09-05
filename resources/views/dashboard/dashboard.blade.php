@@ -1,8 +1,8 @@
 @extends('layout')
 @section('content')
-<div class="row">
+<div class="row ">
     <div class="col-12">
-        <div class="card">
+        <div class=" card_graph">
             <div class="card-body">
                 <h4 class="card-title"></h4>
                 <div id="area-chart"></div>

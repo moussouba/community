@@ -88,7 +88,10 @@ body[data-theme='dark'] {
     color: #ffffff; }
   body[data-theme='dark'] .custom-control-label::before {
     background-color: #6c757d; }
-  body[data-theme='dark'] .card,
+ .card_graph{
+    background: rgb(176, 204, 219);
+  }
+  body[data-theme='dark'] .card
   body[data-theme='dark'] .custom-select,
   body[data-theme='dark'] .nav-tabs .nav-link.active,
   body[data-theme='dark'] .nav-tabs .nav-item.show .nav-link,
