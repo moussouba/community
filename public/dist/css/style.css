@@ -90,7 +90,6 @@ body[data-theme='dark'] {
     background-color: #6c757d; }
   body[data-theme='dark'] .card,
   body[data-theme='dark'] .custom-select,
-  body[data-theme='dark'] .form-control,
   body[data-theme='dark'] .nav-tabs .nav-link.active,
   body[data-theme='dark'] .nav-tabs .nav-item.show .nav-link,
   body[data-theme='dark'] .list-group-item,
@@ -108,8 +107,9 @@ body[data-theme='dark'] {
   body[data-theme='dark'] .select2-container--default .select2-selection--multiple,
   body[data-theme='dark'] .select2-container--classic .select2-selection--single,
   body[data-theme='dark'] .dtp > .dtp-content {
-    background-color: #990599;}
+    background-color: #333d54;}
   body[data-theme='dark'] .dropzone,
+  body[data-theme='dark'] .form-control,
   body[data-theme='dark'] .mailbox .message-center .message-item:hover,
   body[data-theme='dark'] .dropdown-item:hover,
   body[data-theme='dark'] .dropdown-item:focus,
