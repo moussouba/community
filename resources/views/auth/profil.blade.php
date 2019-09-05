@@ -1,4 +1,5 @@
 @extends('layout')
+@section('title','Profil utilisateur - Community')
 @section('content')
 
     <div class="row">

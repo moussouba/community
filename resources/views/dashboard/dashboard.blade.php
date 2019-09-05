@@ -1,9 +1,10 @@
 @extends('layout')
+@section('title','Tableau de bord - Community')
 @section('content')
 <div class="row ">
     <div class="col-12">
-        <div class=" card_graph">
-            <div class="card-body">
+        <div style="background: transparent">
+            <div class="card-body" style="background: transparent">
                 <h4 class="card-title"></h4>
                 <div id="area-chart"></div>
             </div>

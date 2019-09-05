@@ -1,4 +1,5 @@
 @extends('layout')
+@section('title','Liste campagne - Community')
 @section('bread')
     <div class="row">
         <div class="col-3 align-self-center">
@@ -11,11 +12,11 @@
     @if(Auth::user()->type != 1 || Auth::user()->type != 3)
         <div class="col-9 text-right">
             {{--            Search bar--}}
-            <div class="d-inline-block no-block justify-content-end align-items-center">
+            {{--<div class="d-inline-block no-block justify-content-end align-items-center">
                 <form action="" method="post" role="search">
                     <input class="" type="search" placeholder="Rechercher ...">
                 </form>
-            </div>
+            </div>--}}
             {{--            Search bar--}}
             <div class="d-inline-block no-block justify-content-end align-items-center">
                 <a href="{{ route('addS') }}" class="btn btn-pure nouvel">Nouvelle Campagne</a>
@@ -59,7 +60,7 @@
                         </div>
                         <div class="d-flex no-block align-items-center m-b-15">
                             @if(Auth::user()->type == 1 && $item->path != 'NULL' && $item->path != "")
-                                <a class="dropdown-item" href="{{ Storage::path($item->path) }}"> Charger le pv de cette campagne</a>
+                                <a style="background: #eeeeee;color:#000" class="btn col-md-12" href="{{ route('download',['id'=>$item->id]) }}"> Charger le pv de cette campagne</a>
                             @endif
                         </div>
                     </div>

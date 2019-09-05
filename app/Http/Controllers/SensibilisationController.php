@@ -93,16 +93,17 @@ class SensibilisationController extends Controller
             $file = $request->file('pv');
             $ext = $file->getClientOriginalExtension();
             $custom_path = "$sensib->slug.$ext";
-            $path = $request->file('pv')->storeAs('uploadPV',$custom_path);
+            $path = $request->file('pv')->storeAs('public/uploadPV',$custom_path);
             $sensib->path = $path;
             $sensib->save();
         }
 
     }
 
-    public function download($file)
+    public function download($id)
     {
-        return Storage::download(Storage::path());
+        $sensib = Sensibilisation::respo()->findOrFail($id);
+        return response()->download(storage_path("app/public/{$sensib->path}"));
     }
 
 }

@@ -1,4 +1,5 @@
 @extends('layout')
+@section('title','Liste membre - Community')
 @section('bread')
     <div class="row">
         <div class="col-5 align-self-center">

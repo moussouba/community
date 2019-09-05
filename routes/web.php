@@ -1,6 +1,8 @@
 <?php
 
-Auth::routes();
+Auth::routes([
+    'register' => false, // Registration Routes...
+]);
 
 Route::group(['middleware'=>'auth'],function(){
 
@@ -14,10 +16,10 @@ Route::group(['middleware'=>'auth'],function(){
         'uses' => 'Auth\ProfilController@profil'
     ]);
 
-   Route::get('/download/{file}',[
+   Route::get('/download/{id}',[
        'as'=>'download',
        'uses'=>'SensibilisationController@download'
-   ]);
+   ])->where('id','[0-9]+');
 //    Route::get('/registration/{update}',[
 //        'as' => 'registerWiew',
 //        'uses' => 'Auth\ProfilController@registerView'

@@ -17,7 +17,7 @@
                                     <div class="col-sm-9">
                                         <input type="text" name="name" value="{{ old('name') }}" required class="@error('name') is-invalid @enderror form-control" id="inputEmail0" placeholder="Nom du membre">
                                         @error('name')
-                                            <span class="invalid-feedback" role="alert">
+                                        <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
@@ -31,7 +31,7 @@
                                     <div class="col-sm-9">
                                         <input type="text" name="prenom" value="{{ old('prenom') }}" required class="@error('prenom') is-invalid @enderror form-control" id="inputEmail1" placeholder="Prenom du membre">
                                         @error('prenom')
-                                            <span class="invalid-feedback" role="alert">
+                                        <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
@@ -52,7 +52,7 @@
                                     <div class="col-sm-9">
                                         <input type="email" name="email" value="{{ old('email') }}" class="@error('email') is-invalid @enderror form-control" id="inputEmail6" placeholder="E-mail du membre">
                                         @error('email')
-                                            <span class="invalid-feedback" role="alert">
+                                        <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
@@ -68,7 +68,7 @@
                                             <option value="Feminin">Feminin</option>
                                         </select>
                                         @error('sexe')
-                                            <span class="invalid-feedback" role="alert">
+                                        <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
@@ -84,7 +84,7 @@
                                             <option value="Abidjan - Abobo">Abidjan - Abobo</option>
                                         </select>
                                         @error('localite')
-                                            <span class="invalid-feedback" role="alert">
+                                        <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
@@ -103,7 +103,7 @@
                                             <option value="Master 2">Master 2</option>
                                         </select>
                                         @error('niveau')
-                                            <span class="invalid-feedback" role="alert">
+                                        <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
@@ -123,49 +123,49 @@
                                             <option value="CD">CD</option>
                                         </select>
                                         @error('specialite')
-                                            <span class="invalid-feedback" role="alert">
+                                        <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
                                     </div>
                                 </div>
                             </div>
-                            @if(Auth::user()->type == 1)                            
-                            <div class="col-sm-6 col-lg-6">
-                                <div class="form-group row">
-                                    <label for="inputEmail10" class="col-sm-3 text-left control-label col-form-label"> Type de compte</label>
-                                    <div class="col-sm-9">
-                                        <select class="col-md-12  @error('type') is-invalid @enderror" name="type" id="10">
-                                            <option selected value="1">Admin</option>
-                                            <option selected value="2">Président de la communauté</option>
-                                        </select>
-                                        @error('type')
+                            @if(Auth::user()->type == 1)
+                                <div class="col-sm-6 col-lg-6">
+                                    <div class="form-group row">
+                                        <label for="inputEmail10" class="col-sm-3 text-left control-label col-form-label"> Type de compte</label>
+                                        <div class="col-sm-9">
+                                            <select class="col-md-12  @error('type') is-invalid @enderror" name="type" id="10">
+                                                <option selected value="1">Admin</option>
+                                                <option selected value="2">Président de la communauté</option>
+                                            </select>
+                                            @error('type')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
-                                        @enderror
+                                            @enderror
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="col-sm-6 col-lg-6">
-                                <div class="form-group row">
-                                    <label for="inputEmail9" class="col-sm-3 text-left control-label col-form-label"> Communauté</label>
-                                    <div class="col-sm-9">
-                                        <select class="col-md-12 @error('communaute') is-invalid @enderror" name="communaute" id="9">
-                                            <option selected value="null">Aucune communauté</option>
-                                            @foreach($communaute as $com)
-                                                <option value="{{ $com->id }}">{{ $com->nom }} {{ $com->localite }}</option>
-                                            @endforeach
-                                        </select>
-                                        @error('communaute')
+                                <div class="col-sm-6 col-lg-6">
+                                    <div class="form-group row">
+                                        <label for="inputEmail9" class="col-sm-3 text-left control-label col-form-label"> Communauté</label>
+                                        <div class="col-sm-9">
+                                            <select class="col-md-12 @error('communaute') is-invalid @enderror" name="communaute" id="9">
+                                                <option selected value="null">Aucune communauté</option>
+                                                @foreach($communaute as $com)
+                                                    <option value="{{ $com->id }}">{{ $com->nom }} {{ $com->localite }}</option>
+                                                @endforeach
+                                            </select>
+                                            @error('communaute')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
-                                        @enderror
+                                            @enderror
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
                             @endif
                             <div class="col-sm-6 col-lg-6">
                                 <div class="form-group row">
@@ -173,7 +173,7 @@
                                     <div class="col-sm-9">
                                         <input type="password" name="password" value="" class="@error('password') is-invalid @enderror form-control" id="inputEmail14" placeholder="Mot de passe du membre">
                                         @error('password')
-                                            <span class="invalid-feedback" role="alert">
+                                        <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror

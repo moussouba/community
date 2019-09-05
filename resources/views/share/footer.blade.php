@@ -1,3 +1,3 @@
-<footer class="footer text-center">
-    All Rights Reserved by AdminBite admin. Designed and Developed by Victoria and Yves</a>.
+<footer class="footer text-center" style="color: #0a3c33">
+    All Rights Reserved 2019. Developed by Bosser pour être boss - Koumassi</a>.
 </footer>
