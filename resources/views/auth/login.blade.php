@@ -54,7 +54,7 @@
                     La plateforme des communautés uvci
                 </div>
                 <div class="col-12 mt-4 mb-4 text-center text- fa-3x" style="font-size:16px">
-                    Community est une plateforme de récensement pour les communautés de l'Université Virtuelle de Cote d'Ivoire(UVCI) , elle va les permettre de mener à bien leurs différentes campagnes de sensibilisation , notement par le récensement de facon numerique des nouveaux bacheliers et ou toutes personnes desireuse d'en savoir plus sur l'Universite Virtuelle de Cote d Ivoire.
+                    Community est une plateforme de récensement pour les communautés de l'Université Virtuelle de Cote d'Ivoire(UVCI) , elle va vous permettre de mener à bien vos différentes campagnes de sensibilisation , notament par le récensement de façon numerique des nouveaux bacheliers et ou toutes personnes desireuse d'en savoir plus sur l'Universite Virtuelle de Cote d Ivoire.
                     Cette plateforme a été mise en place par la communauté BOSSER POUR ETRE BOSS DE KOUMASSI.
                 </div>
                 <div class="container" style="bottom:0px;position:absolute">
