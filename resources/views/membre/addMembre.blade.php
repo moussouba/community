@@ -1,6 +1,12 @@
 @extends('layout');
 @section('content')
     <div class="row">
+        <style type="text/css">
+            .form-control{
+                background-color: white !important;
+                color: black !important
+            }
+        </style>
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
